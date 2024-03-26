@@ -93,23 +93,14 @@
 							aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav accordion"
 								id="sidenavAccordionPages">
-								<a class="nav-link collapsed" href="#" data-bs-toggle="collapse">
-									상품목록 </a>
-
-								<!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-									data-bs-target="#pagesCollapseError" aria-expanded="false"
-									aria-controls="pagesCollapseError"> Error
-									<div class="sb-sidenav-collapse-arrow">
-										<i class="fas fa-angle-down"></i>
-									</div>
-								</a> -->
+								<a class="nav-link" href="productManagement.pc">상품목록</a>
 							</nav>
 						</div>
 						<!-- //상품관리 -->
 						<!-- 게시글 관리 -->
-						<a class="nav-link collapsed" href="#"
-							data-bs-toggle="collapse" data-bs-target="#collapseLayout"
-							aria-expanded="false" aria-controls="collapseLayout">
+						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+							data-bs-target="#collapseLayout" aria-expanded="false"
+							aria-controls="collapseLayout">
 							<div class="sb-nav-link-icon">
 								<i class="fas fa-columns"></i>
 							</div> 게시글관리
@@ -121,10 +112,10 @@
 						<div class="collapse" id="collapseLayout"
 							aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
-								<a class="nav-link" href="memberInfo.mc">공지사항</a>
-								<a class="nav-link" href="memberInfo.mc">자주묻는 질문</a>
-								<a class="nav-link" href="memberInfo.mc">리뷰</a>
-								<a class="nav-link" href="memberInfo.mc">질문 게시판</a>
+								<a class="nav-link" href="memberInfo.mc">공지사항</a> <a
+									class="nav-link" href="memberInfo.mc">자주묻는 질문</a> <a
+									class="nav-link" href="memberInfo.mc">리뷰</a> <a
+									class="nav-link" href="memberInfo.mc">질문 게시판</a>
 							</nav>
 						</div>
 						<!-- //게시글 관리 -->
