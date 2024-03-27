@@ -177,19 +177,31 @@
 						<div class=" mb-3 text-center">
 							<label for="inputEmail" >등급</label><br> <select name="grade"
 								class="col-md-4 text-center">
-								<option value="${member.getGrade() }">${member.getGrade() }</option>
-								<option value="브론즈">브론즈</option>
-								<option value="실버">실버</option>
-								<option value="골드">골드</option>
+								<option value="브론즈"
+								${member.getGrade() eq '브론즈' ? 'selected' : ''}
+								>브론즈</option>
+								<option value="실버"
+								${member.getGrade() eq '실버' ? 'selected' : ''}
+								>실버</option>
+								<option value="골드"
+								${member.getGrade() eq '골드' ? 'selected' : ''}
+								>골드</option>
+								
 							</select>
 						</div>
 						<div class=" mb-5 text-center">
 							<label for="inputEmail">권한</label><br> <select name="role"
 								class="col-md-4 text-center">
-								<option value="${member.getRole() }">${member.getRole() }</option>
-								<option value="일반회원">일반회원</option>
-								<option value="블랙회원">블랙회원</option>
-								<option value="관리자">관리자</option>
+								<option value="일반회원"
+								${member.getRole() eq '일반회원' ? 'selected' : ''}
+								>일반회원</option>
+								<option value="블랙회원"
+								${member.getRole() eq '블랙회원' ? 'selected' : ''}
+								>블랙회원</option>
+								<option value="관리자"
+								${member.getRole() eq '관리자' ? 'selected' : ''}
+								>관리자</option>
+							
 							</select>
 						</div>
 						<div class="text-center">

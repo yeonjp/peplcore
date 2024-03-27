@@ -25,6 +25,7 @@ public class MemberDAO {
 			+ " WHERE DATEDIFF(CURRENT_DATE, date) <= 14";
 	private final String USER_ALL_COUNT = "select count(id) from member where id is not null";
 	private final String BLACK_USER_COUNT = "select count(role) from member where role='블랙회원'";
+	private final String NEW_USER_LIST = "SELECT * FROM member WHERE DATEDIFF(CURRENT_DATE, date) <= 14";
 
 	// 회원정보 상세 조회
 	public MemberDTO getOneMemberList(String id) {
@@ -252,6 +253,44 @@ public class MemberDAO {
 			MyDBConnection.close(rs, pstmt, con);
 		} // end of try-catch
 		return -1;// 데이터 베이스 오루 알려주기
+	}// end of registerCheck
+
+	// 신규회원 리스트 가져오는 메소드
+	public List<MemberDTO> newMemberList() {
+		List<MemberDTO> newMemberList = new ArrayList<MemberDTO>();
+		MemberDTO member = null;
+		
+		try {
+			con = MyDBConnection.getConnection();
+			pstmt = con.prepareStatement(NEW_USER_LIST);
+			rs = pstmt.executeQuery();
+			while (rs.next()) {
+				member = new MemberDTO();
+
+				member.setId(rs.getString("id"));
+				member.setPassword(rs.getString("password"));
+				member.setName(rs.getString("name"));
+				member.setPhone(rs.getString("phone"));
+				member.setAddress(rs.getString("address"));
+				member.setSsn(rs.getString("ssn"));
+				member.setEmail(rs.getString("email"));
+				member.setGender(rs.getString("gender"));
+				member.setNewsAgency(rs.getString("newsAgency"));
+				member.setCountrySelect(rs.getString("countrySelect"));
+				member.setRole(rs.getString("role"));
+				member.setGrade(rs.getString("grade"));
+				member.setDate(rs.getDate("date"));
+
+				newMemberList.add(member);
+			} // end of while
+		
+			
+			
+		} catch (SQLException e) {
+		} finally {
+			MyDBConnection.close(rs, pstmt, con);
+		} // end of try-catch
+		return newMemberList;
 	}// end of registerCheck
 
 }// end of class

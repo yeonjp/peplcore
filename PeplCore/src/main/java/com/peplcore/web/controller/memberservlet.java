@@ -47,10 +47,10 @@ public class memberservlet extends HttpServlet {
 		final String PATH = URI.substring(URI.lastIndexOf("/"));
 
 		switch (PATH) {
-		case "/signInView.mc"://로그인 화면으로 이동
+		case "/signInView.mc":// 로그인 화면으로 이동
 			toSignIn(request, response);
 			break;
-		case "/signUpView.mc"://회원가입 화면으로 이동
+		case "/signUpView.mc":// 회원가입 화면으로 이동
 			toSignUp(request, response);
 			break;
 		case "/insertMember.mc":
@@ -144,9 +144,9 @@ public class memberservlet extends HttpServlet {
 		String countrySelect = request.getParameter("countrySelect");
 
 		// 유효성 체크
-		if (id == null || id.equals("") || pass1 == null || pass1.equals("") || pass2 == null
-				|| pass2.equals("") || name == null || name.equals("") || phone == null || phone.equals("")
-				|| address == null || address.equals("")|| zipCode == null || zipCode.equals("")|| ssn == null || ssn.equals("")) {
+		if (id == null || id.equals("") || pass1 == null || pass1.equals("") || pass2 == null || pass2.equals("")
+				|| name == null || name.equals("") || phone == null || phone.equals("") || address == null
+				|| address.equals("") || zipCode == null || zipCode.equals("") || ssn == null || ssn.equals("")) {
 
 			request.getSession().setAttribute("messageType", "오류 메세지");
 			request.getSession().setAttribute("messageContent", "정보를 올바르게 입력해 주세요");
@@ -179,21 +179,21 @@ public class memberservlet extends HttpServlet {
 		MemberDAO dao = new MemberDAO();
 
 		int result = dao.insertMember(member);
-		
-		//회원가입 완료
-		if(result == 1) {
+
+		// 회원가입 완료
+		if (result == 1) {
 			request.getSession().setAttribute("messageType", "입력 성공 메세지");
 			request.getSession().setAttribute("messageContent", "회원가입 완료");
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/");
 			dispatcher.forward(request, response);
 		}
-		//회원가입 실패
+		// 회원가입 실패
 		else {
 			request.getSession().setAttribute("messageType", "입력 오류 메세지");
 			request.getSession().setAttribute("messageContent", "이미 존재하는 회원입니다.");
 			RequestDispatcher dispatcher = request.getRequestDispatcher("/");
 			dispatcher.forward(request, response);
-		}//end of if
+		} // end of if
 
 	}// end of insertMember
 
@@ -269,6 +269,10 @@ public class memberservlet extends HttpServlet {
 
 	// 관리자 페이지로 가는 메소드
 	public void admin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		MemberDAO dao = new MemberDAO();
+		List<MemberDTO> newMemberList = dao.newMemberList();
+
+		request.setAttribute("newMemberList", newMemberList);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/view/admin.jsp");
 		dispatcher.forward(request, response);
 	}// end of admin
