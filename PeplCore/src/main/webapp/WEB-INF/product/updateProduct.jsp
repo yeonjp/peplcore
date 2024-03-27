@@ -1,482 +1,239 @@
-<%@page import="com.peplcore.blogic.product.ProductDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>관리자 페이지</title>
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-	integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-	crossorigin="anonymous" referrerpolicy="no-referrer" />
-<style>
-/*글꼴 import*/
-@font-face {
-	font-family: "GmarketSansMedium";
-	src:
-		url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
-		format("woff");
-	font-weight: normal;
-	font-style: normal;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "GmarketSansMedium";
-}
-
-body {
-	margin: 0 auto;
-	background-color: #373f52;
-	width: 1400px;
-	height: 820px;
-}
-
-.container {
-	width: 1400px;
-	height: 820px;
-	background-color: #edf0f2;
-}
-
-/* 공통 코드 : a*/
-a {
-	color: black;
-	text-decoration: none;
-	display: block;
-}
-
-/*header*/
-.header {
-	font-family: "GmarketSansMedium";
-	font-weight: bold;
-	width: 1400px;
-	height: 80px;
-	display: flex;
-	justify-content: space-between;
-	background-color: #272e3d;
-	align-items: center;
-}
-
-.header a {
-	color: white;
-}
-
-.header>h1, img {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.header>img {
-	width: 160px;
-	height: 80px;
-}
-
-.header>topNav {
-	text-decoration: none;
-	display: block;
-}
-
-.admin {
-	font-size: 1rem;
-	font-weight: bold;
-	margin-left: 10px;
-}
-
-.topNav {
-	margin-right: 25px;
-}
-
-.topNav li {
-	display: inline-block;
-}
-
-/*leftmain*/
-.leftmain {
-	font-family: "GmarketSansMedium";
-	font-weight: bold;
-	width: 150px;
-	height: 680px;
-	float: left;
-	text-align: center;
-	background-color: #272e3d;
-}
-
-.sideMenu {
-	margin: 0;
-	padding: 0;
-	width: 150px;
-}
-
-.sideMenu>li {
-	list-style: none;
-	padding: 0;
-	width: 150px;
-	text-align: center;
-	line-height: 40px;
-	background-color: #272e3d;
-	border: 0;
-}
-
-.sideMenu a {
-	color: white;
-}
-
-.userhr {
-	border-top: 1px solid #494e5a;
-}
-
-/* 아코디언 */
-.accordion-header {
-	background-color: #272e3d;
-	color: #fff;
-	padding: 15px;
-	cursor: pointer;
-}
-
-.accordion-content {
-	width: 120px;
-	border-radius: 5px;
-	display: none;
-	margin-left: 15px;
-	padding: 15px;
-	background-color: #151f37;
-}
-
-.accordion-content a {
-	color: gray;
-}
-/* 마우스 올렸을 때 반응! */
-.sideMenu .accordion-header:hover {
-	background-color: #ffd343;
-	transition: 0.7s;
-	color: #272e3d;
-}
-
-/*main*/
-.main {
-	margin: 0;
-	padding: 0;
-	width: 1250px;
-	height: 680px;
-	float: left;
-}
-
-/*mainNav*/
-.mainNav li {
-	display: inline-block;
-}
-
-/* 버튼 변경하기!!! */
-.insertBtn, .cancletBtn {
-	background-color: #04AA6D;
-	border: none;
-	color: white;
-	padding: 16px 32px;
-	text-decoration: none;
-	margin: 4px 2px;
-	cursor: pointer;
-}
-/*maincontent*/
-.maincontent {
-	width: 1150px;
-	height: 600px;
-	margin: 40px auto;
-}
-/*상품목록*/
-.mainh {
-	width: 1150px;
-	height: 30px;
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 5px;
-}
-
-.mainh>h3 {
-	text-align: center;
-	font-size: 1.2rem;
-	font-weight: bold;
-}
-
-.mainh>h4 {
-	text-align: center;
-	font-size: 1rem;
-	font-weight: bold;
-	border: 1px solid #ccc;
-	background-color: #ffd343;
-}
-/*상품 등록*/
-.uploadCancle {
-	width: 100px;
-	height: 30px;
-}
-
-.uploadCancle>h4 {
-	text-align: center;
-	font-size: 1rem;
-	font-weight: bold;
-	border: 1px solid #ccc;
-	background-color: #ffd343;
-	margin-bottom: 1px;
-}
-
-.maincontent>h3 {
-	font-size: 1.2rem;
-	font-weight: bold;
-	margin-bottom: 10px;
-}
-
-.maincontent>hr {
-	border: 1px solid black;
-	margin-bottom: 10px;
-}
-
-.maincontent>.lasthr {
-	border: 1px solid black;
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-
-.maincontent>h4 {
-	font-weight: bold;
-	margin: 0;
-	padding: 0;
-}
-
-table {
-	margin: 0;
-	padding: 0;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	text-align: center;
-	border: 1px solid black;
-	border-collapse: collapse;
-	width: 800px;
-}
-
-th, td {
-	width: 100px;
-	height: 30px;
-	margin: 0;
-	padding: 0;
-	border: 1px solid black;
-}
-
-h4 {
-	margin-bottom: 15px;
-}
-/*footer*/
-.Footer {
-	text-align: center;
-	clear: both;
-	width: 1400px;
-	height: 60px;
-	line-height: 60px;
-	background-color: #fff;
-}
-</style>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>Static Navigation - SB Admin</title>
+<link href="css/styles.css" rel="stylesheet" />
+<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+	crossorigin="anonymous"></script>
 </head>
 <body>
-	<!-- container-->
-	<div class="container">
-		<!-- header-->
-		<div class="header">
-			<h1 class="admin">
-				<a href="./index_jyp.html">ADMINISTRATOR</a>
-			</h1>
-			<!--logo-->
-			<img class="mainlogo" src="../images/yellow.png"
-				alt="This is PeplCore logo" />
-			<!--topNav-->
-			<div class="topNav">
-				<ul>
-					<li><a href="#"> <i class="fa-solid fa-store fa-lg"></i>&nbsp;쇼핑몰&nbsp;&nbsp;&nbsp;
-					</a></li>
-					<li><a href="#"><i
-							class="fa-solid fa-arrow-right-from-bracket"></i>&nbsp;로그아웃</a></li>
-				</ul>
-				<!--end of topNav-->
+	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+		<!-- Navbar Brand-->
+		<a class="navbar-brand ps-1 mt-4 ms-3" href="index.jsp"><img
+			src="./images/logo.png" width="150px" height="70px" alt="logo">
+		</a>
+		<!-- Sidebar Toggle-->
+		<button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
+			id="sidebarToggle" href="#!">
+			<i class="fas fa-bars"></i>
+		</button>
+		<!-- Navbar Search-->
+		<form
+			class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+			<div class="input-group">
+				<input class="form-control" type="text" placeholder="Search for..."
+					aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+				<button class="btn btn-primary" id="btnNavbarSearch" type="button">
+					<i class="fas fa-search"></i>
+				</button>
 			</div>
-			<!--end of header-->
-		</div>
-		<!-- 왼쪽 사이드바 메뉴, 아코디언 사용할거임 -->
-		<div class="leftmain">
-			<ul class="sideMenu">
-				<!-- 회원 관리 -->
-				<li>
-					<div class="accordion-header userhr"
-						onmouseover="ToggleAccordion(this)">회원 관리</div>
-					<div class="accordion-content">
-						<!--display:none-->
-						<p>
-							<a href="#">회원 관리</a>
-						</p>
+		</form>
+		<!-- Navbar-->
+		<ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+			<li>
+				<!-- 로그아웃 -->
+				<button type="button" class="btn btn=primary text-white"
+					onclick="location.href='logout.mc'">로그아웃</button>
+			</li>
+		</ul>
+	</nav>
+	<div id="layoutSidenav">
+		<div id="layoutSidenav_nav">
+			<nav class="sb-sidenav accordion sb-sidenav-dark"
+				id="sidenavAccordion">
+				<div class="sb-sidenav-menu">
+					<div class="nav">
+						<!--   <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div> -->
+						<a class="nav-link collapsed mt-5" href="#"
+							data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
+							aria-expanded="false" aria-controls="collapseLayouts">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-columns"></i>
+							</div> 회원관리
+							<div class="sb-sidenav-collapse-arrow">
+								<i class="fas fa-angle-down"></i>
+							</div>
+						</a>
+
+						<div class="collapse" id="collapseLayouts"
+							aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+							<nav class="sb-sidenav-menu-nested nav">
+								<a class="nav-link" href="memberInfo.mc">회원 목록</a>
+							</nav>
+						</div>
+						<!-- //회원관리 -->
+						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+							data-bs-target="#collapsePages" aria-expanded="false"
+							aria-controls="collapsePages">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-book-open"></i>
+							</div> 상품관리
+							<div class="sb-sidenav-collapse-arrow">
+								<i class="fas fa-angle-down"></i>
+							</div>
+						</a>
+						<div class="collapse" id="collapsePages"
+							aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+							<nav class="sb-sidenav-menu-nested nav accordion"
+								id="sidenavAccordionPages">
+								<a class="nav-link collapsed" href="productManagement.pc"
+									data-bs-toggle="collapse"> 상품목록 </a>
+
+								<!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+									data-bs-target="#pagesCollapseError" aria-expanded="false"
+									aria-controls="pagesCollapseError"> Error
+									<div class="sb-sidenav-collapse-arrow">
+										<i class="fas fa-angle-down"></i>
+									</div>
+								</a> -->
+							</nav>
+						</div>
+						<!-- //상품관리 -->
+						<!-- 게시글 관리 -->
+						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+							data-bs-target="#collapseLayout" aria-expanded="false"
+							aria-controls="collapseLayout">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-columns"></i>
+							</div> 게시글관리
+							<div class="sb-sidenav-collapse-arrow">
+								<i class="fas fa-angle-down"></i>
+							</div>
+						</a>
+
+						<div class="collapse" id="collapseLayout"
+							aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+							<nav class="sb-sidenav-menu-nested nav">
+								<a class="nav-link" href="memberInfo.mc">공지사항</a> <a
+									class="nav-link" href="memberInfo.mc">자주묻는 질문</a> <a
+									class="nav-link" href="memberInfo.mc">리뷰</a> <a
+									class="nav-link" href="memberInfo.mc">질문 게시판</a>
+							</nav>
+						</div>
+						<!-- //게시글 관리 -->
+						<a class="nav-link" href="charts.html">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-chart-area"></i>
+							</div> Charts
+						</a> <a class="nav-link" href="tables.html">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-table"></i>
+							</div> Tables
+						</a>
 					</div>
-				</li>
-				<!-- 상품 관리 -->
-				<li>
-					<div class="accordion-header" onmouseover="ToggleAccordion(this)">
-						상품 관리</div> <!--display:none-->
-					<div class="accordion-content">
-						<p>
-							<a href="productManagement.pc">상품 목록</a>
-						</p>
+				</div>
+				<div class="sb-sidenav-footer">
+					<div class="small">Logged in as:</div>
+					Start Bootstrap
+				</div>
+			</nav>
+		</div>
+		<!-- 본문 -->
+		<div id="layoutSidenav_content">
+			<!-- 상품정보 수정하는 곳 -->
+			<main style="background-color: #edf0f2 !important;">
+				<div class="container mx-auto mt-5">
+					<h1>상품정보 수정</h1>
+					<hr>
+					<!-- 수정 form -->
+					<form action="updateProduct.pc" method="post"
+						class="border p-3 col-xl-11 mx-auto">
+						<div class=" mb-3 col-md-4 mx-auto">
+							<label for="inputEmail">상품번호</label> <input type="text"
+								name="pseq" readonly="readonly" value="${product.pseq }"
+								class="form-control" />
+						</div>
+						<div class=" mb-3 col-md-4 mx-auto">
+							<label for="inputEmail">상품 분류</label><br> <select
+								name="pcategory" class="col-md-4 text-center">
+								<option value="상의"
+									${product.pcategory eq '상의' ? 'selected' : ''}>상의</option>
+								<option value="하의"
+									${product.pcategory eq '하의' ? 'selected' : ''}>하의</option>
+								<option value="신발"
+									${product.pcategory eq '신발' ? 'selected' : ''}>신발</option>
+								<option value="악세사리"
+									${product.pcategory eq '악세사리' ? 'selected' : ''}>악세사리</option>
+							</select>
+						</div>
+						<div class=" mb-3 col-md-4 mx-auto">
+							<label for="inputEmail">상품 이름</label> <input type="text"
+								class="form-control" name="pname" value="${product.pname}">
+						</div>
+						<div class=" mb-3 col-md-4 mx-auto">
+							<label for="inputEmail">상품 수량</label> <input type="text"
+								name="pnum" class="form-control" value="${product.pnum }">
+						</div>
+						<div class=" mb-3 col-md-4 mx-auto">
+							<label for="inputEmail">상품 품절 여부</label><br> <input
+								type="radio" name="poutStock" value="품절"
+								${product.poutStock eq '품절' ? 'checked' : ''}>품절 <input
+								type="radio" name="poutStock" value="재고있음"
+								${product.poutStock eq '재고있음' ? 'checked' : ''}>재고있음
+						</div>
+						<div class=" mb-3 col-md-4 mx-auto">
+							<label for="inputEmail">상품 사이즈</label> <input type="text"
+								name="psize" value="${product.psize }" readonly
+								class="form-control" />
+						</div>
+						<div class=" mb-3 col-md-4 mx-auto">
+							<label for="inputEmail">상품 원가</label> <input type="text"
+								name="pcost" value="${product.pcost }" class="form-control" />
+						</div>
+						<div class=" mb-3 col-md-4 mx-auto">
+							<label for="inputEmail">상품 판매가</label> <input type="text" name="pselling"
+								value="${product.pselling }" class="form-control" />
+						</div>
+						<div class=" mb-5 text-center">
+							<label for="inputEmail">상품 설명</label><br>
+							<textarea name="pdescription" cols="60" rows="10">${product.pdescription }</textarea>
+						</div>
+						<div class="text-center">
+							<input type="submit" class="btn btn-primary col-md-2 me-4"
+								value="수정">
+							<button type="button" class="btn btn-danger col-md-2 ms-4"
+								onclick="location.href='productManagement.pc'">취소</button>
+						</div>
+					</form>
+					<!-- //수정 form -->
+				</div>
+			</main>
+
+			<footer class="py-4 bg-light mt-auto">
+				<div class="container-fluid px-4">
+					<div
+						class="d-flex align-items-center justify-content-between small">
+						<div class="text-muted">Copyright &copy; Your Website 2023</div>
+						<div>
+							<a href="#">Privacy Policy</a> &middot; <a href="#">Terms
+								&amp; Conditions</a>
+						</div>
 					</div>
-				</li>
-				<!-- 게시글 관리 -->
-				<li>
-					<div class="accordion-header" onmouseover="ToggleAccordion(this)">
-						게시글 관리</div> <!--display:none-->
-					<div class="accordion-content">
-						<p>
-							<a href="#">공지사항</a>
-						</p>
-						<p>
-							<a href="#">FAQ</a>
-						</p>
-						<p>
-							<a href="#">QnA</a>
-						</p>
-						<p>
-							<a href="#">review</a>
-						</p>
-					</div>
-				</li>
-			</ul>
-			<!-- end of leftmain-->
+				</div>
+			</footer>
 		</div>
-
-		<!-- main-->
-		<div class="main">
-			<!--maincontent-->
-			<div class="maincontent">
-				<h3>상품 수정</h3>
-				<hr />
-				<form action="updateProduct.pc" method="post">
-<!-- 				<form action="updateProduct.pc"> -->
-					<table>
-						<tr>
-							<th>상품 번호</th>
-							<td><input type="text" name="pseq" readonly="readonly"
-								value="${product.pseq }" /></td>
-						</tr>
-						<tr>
-							<th>상품 분류</th>
-							<td><select name="pcategory">
-									<option value="상의"
-										${product.pcategory eq '상의' ? 'selected' : ''}>상의</option>
-									<option value="하의"
-										${product.pcategory eq '하의' ? 'selected' : ''}>하의</option>
-									<option value="신발"
-										${product.pcategory eq '신발' ? 'selected' : ''}>신발</option>
-									<option value="악세사리"
-										${product.pcategory eq '악세사리' ? 'selected' : ''}>악세사리</option>
-							</select> <!-- <input type="radio" name="pcategory" value="하의">하의
-								<input type="radio" name="pcategory" value="신발">신발
-								<input type="radio" name="pcategory" value="악세사리">악세사리 --></td>
-							<%-- <c:if test="${product.pcategory == '상의' }">
-									<input type="radio" name="pcategory" value="상의" checked>상의
-									<input type="radio" name="pcategory" value="하의">하의
-									<input type="radio" name="pcategory" value="신발">신발
-									<input type="radio" name="pcategory" value="악세사리">악세사리
-								</c:if>
-								<c:if test="${product.pcategory == '하의' }">
-									<input type="radio" name="pcategory" value="상의">상의
-									<input type="radio" name="pcategory" value="하의" checked>하의
-									<input type="radio" name="pcategory" value="신발">신발
-									<input type="radio" name="pcategory" value="악세사리">악세사리
-								</c:if>
-								<c:if test="${product.pcategory == '신발' }">
-									<input type="radio" name="pcategory" value="상의">상의
-									<input type="radio" name="pcategory" value="하의">하의
-									<input type="radio" name="pcategory" value="신발" checked>신발
-									<input type="radio" name="pcategory" value="악세사리">악세사리
-								</c:if>
-								<c:if test="${product.pcategory == '악세사리' }">
-									<input type="radio" name="pcategory" value="상의">상의
-									<input type="radio" name="pcategory" value="하의">하의
-									<input type="radio" name="pcategory" value="신발">신발
-									<input type="radio" name="pcategory" value="악세사리" checked>악세사리
-								</c:if> --%>
-							<!-- 							<td>
-								<select name="pcategory">
-									<option value="top">상의</option>
-									<option value="pants">하의</option>
-									<option value="shoes">신발</option>
-									<option value="accs">악세사리</option>
-								</select>
-							</td> -->
-						</tr>
-						<tr>
-							<th>상품 이름</th>
-							<td><input type="text" name="pname" value="${product.pname}"></td>
-						</tr>
-						<tr>
-							<th>상품 수량</th>
-							<td><input type="text" name="pnum" value="${product.pnum }"></td>
-						</tr>
-						<tr>
-							<th>상품 품절 여부</th>
-							<td>													<!-- 라디오 버튼의 상태 설정 -->
-								<input type="radio" name="poutStock" value="품절" ${product.poutStock eq '품절' ? 'checked' : ''}>품절
-								<input type="radio" name="poutStock" value="재고있음" ${product.poutStock eq '재고있음' ? 'checked' : ''}>재고있음
-							</td>
-						</tr>
-						<tr>
-							<th>상품 사이즈</th>
-							<td><input type="text" name="psize"
-								value="${product.psize }" readonly /></td>
-						</tr>
-						<tr>
-							<th>상품 설명</th>
-							<td><textarea name="pdescription" cols="60" rows="10">${product.pdescription }</textarea></td>
-						</tr>
-						<tr>
-							<th>상품 원가</th>
-							<td><input type="text" name="pcost"
-								value="${product.pcost }" /></td>
-						</tr>
-						<tr>
-							<th>상품 판매가</th>
-							<td><input type="text" name="pselling"
-								value="${product.pselling }" /></td>
-						</tr>
-
-					</table>
-
-					<input type="submit" name="insertProduct" class="insertBtn"
-						value="수정완료"></input>
-					<!-- 나중에 -->
-				</form>
-				<input type="button" name="cancleProduct" class="cancletBtn"
-					value="수정취소" onclick="location.href='productManagement.pc'"></input>
-
-			</div>
-			<!-- end of maincontent-->
-		</div>
-		<!--end of main-->
-
-		<!--footer-->
-		<div class="Footer">
-			<p>Copyright &copy; 주식회사 불사조 All Rights Reserved</p>
-		</div>
-		<!--end of footer-->
 	</div>
-	<!-- end of container -->
-
-	<!-- 아코디언 js 코드 -->
-	<script>
-		function ToggleAccordion(sideMenu) {
-			var content = sideMenu.nextElementSibling;
-			if (content.style.display === "block") {
-				content.style.display = "none";
-			} else {
-				content.style.display = "block";
-			}
-		}
-	</script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+		crossorigin="anonymous"></script>
+	<script src="js/scripts.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+		crossorigin="anonymous"></script>
+	<script src="js/datatables-simple-demo.js"></script>
 </body>
 </html>
