@@ -88,18 +88,8 @@
 						</a>
 						<div class="collapse" id="collapsePages"
 							aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-							<nav class="sb-sidenav-menu-nested nav accordion"
-								id="sidenavAccordionPages">
-								<a class="nav-link collapsed" href="productManagement.pc" data-bs-toggle="collapse">
-									상품목록 </a>
-
-								<!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-									data-bs-target="#pagesCollapseError" aria-expanded="false"
-									aria-controls="pagesCollapseError"> Error
-									<div class="sb-sidenav-collapse-arrow">
-										<i class="fas fa-angle-down"></i>
-									</div>
-								</a> -->
+							<nav class="sb-sidenav-menu-nested nav">
+								<a class="nav-link" href="productManagement.pc">상품목록</a>
 							</nav>
 						</div>
 						<!-- //상품관리 -->
@@ -190,7 +180,7 @@
 									</thead>
 									<tbody>
 										<c:forEach var="v" items="${memberList}">
-											<tr >
+											<tr>
 												<td class="mt-3">${v.getName()}</td>
 												<td>${v.getId()}</td>
 												<td>${v.getPhone()}</td>

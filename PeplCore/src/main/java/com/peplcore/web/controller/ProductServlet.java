@@ -91,7 +91,7 @@ public class ProductServlet extends HttpServlet {
 		ProductDAO dao = new ProductDAO();
 		dao.insertProduct(dto);
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/getAllProduct.pc");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/productManagement.pc");
 		dispatcher.forward(request, response);
 	}
 
@@ -203,7 +203,9 @@ public class ProductServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		System.out.println("상품 등록 화면으로 이동");
-
+		ProductDAO dao = new ProductDAO();
+		int pseq = dao.getLastProductSeq()+1;
+		request.setAttribute("pseq", pseq);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/product/insertProduct.jsp");
 		dispatcher.forward(request, response);
 	}

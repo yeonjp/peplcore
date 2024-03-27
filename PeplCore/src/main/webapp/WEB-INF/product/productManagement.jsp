@@ -88,18 +88,8 @@
 						</a>
 						<div class="collapse" id="collapsePages"
 							aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
-							<nav class="sb-sidenav-menu-nested nav accordion"
-								id="sidenavAccordionPages">
-								<a class="nav-link collapsed" href="productManagement.pc"
-									data-bs-toggle="collapse"> 상품목록 </a>
-
-								<!-- <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-									data-bs-target="#pagesCollapseError" aria-expanded="false"
-									aria-controls="pagesCollapseError"> Error
-									<div class="sb-sidenav-collapse-arrow">
-										<i class="fas fa-angle-down"></i>
-									</div>
-								</a> -->
+							<nav class="sb-sidenav-menu-nested nav">
+								<a class="nav-link" href="productManagement.pc">상품목록</a>
 							</nav>
 						</div>
 						<!-- //상품관리 -->
@@ -146,11 +136,14 @@
 		<div id="layoutSidenav_content">
 			<main>
 				<div class="container-fluid px-4">
-					<h1 class="mt-4">상픔관리 페이지</h1>
+					<h1 class="mt-4">상품관리 페이지</h1>
 
 
 					<!-- 상픔 리스트 -->
+					<div class="justify-content-between d-flex">
 					<h3 class="mt-5">상품 목록</h3>
+					<button type="button" class="btn btn-primary mt-5 me-5" onclick="location.href='insertProductView.pc'">상품등록</button>
+					</div>
 					<hr>
 					<div class="container-fluid px-4">
 						<div class="card mb-4">
