@@ -169,40 +169,154 @@
 						</table>
 					</div>
 					<!-- //신규회원 -->
-					<!-- 신규 게시글 -->
+					<!-- 신규 리뷰 삭제 예정-->
+					<h2 class="mt-4 mb-2">신규 리뷰</h2>
 					<div class="card-body">
-						<table class="table" class="text-center pt-3">
-							<thead>
-								<tr>
-									<th>상품 번호</th>
-									<th>상품 분류</th>
-									<th>상품 이름</th>
-									<th>상품 수량</th>
-									<th>상품 품절 여부</th>
-									<th>상품 사이즈</th>
-									<th>상품 설명</th>
-									<th>상품 원가</th>
-									<th>상품 판매가</th>
-								</tr>
-							</thead>
-							<tbody>
-								<c:forEach items="${productList}" var="product">
-									<tr>
-										<td>${product.getPseq()}</td>
-										<td>${product.getPcategory()}</td>
-										<td>${product.getPname()}</td>
-										<td>${product.getPnum()}</td>
-										<td>${product.getPoutStock()}</td>
-										<td>${product.getPsize()}</td>
-										<td>${product.getPdescription()}</td>
-										<td>${product.getPcost()}</td>
-										<td>${product.getPselling()}</td>
-									</tr>
-								</c:forEach>
-							</tbody>
+						<table class="table border text-center" class="text-center pt-3">
+							<tr>
+								<th>리뷰 번호</th>
+								<th>상품 사진</th>
+								<th>상품명</th>
+								<th>사용자 ID</th>
+								<th>리뷰 제목</th>
+								<th>리뷰 내용</th>
+								<th>리뷰 작성 날짜</th>
+								<th colspan="2">관리</th>
+							</tr>
+							<tr>
+								<td>10</td>
+								<td><img class="acc1" src="./images/acc.jpg" width="70px"
+									height="70px"></td>
+								<td>목걸이 1</td>
+								<td>zelda17175</td>
+								<td>예뻐요~</td>
+								<td>원하던 스타일이에요</td>
+
+								<td>2024.03.27</td>
+								<td><a href="#" class="btn btn-danger">삭제</a></td>
+								<td><a href="#" class="btn btn-success">댓글</a></td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td><img class="acc1" src="./images/blue_shirts.jpg"
+									width="70px" height="70px"></td>
+								<td>하늘색 셔츠</td>
+								<td>link0090</td>
+								<td>작아요</td>
+								<td>사이즈가 작음</td>
+
+								<td>2024.03.17</td>
+								<td><a href="#" class="btn btn-danger">삭제</a></td>
+								<td><a href="#" class="btn btn-success">댓글</a></td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td><img class="acc1" src="./images/cap.jpg" width="70px"
+									height="70px"></td>
+								<td>파랑색 모자</td>
+								<td>Callie_S2</td>
+								<td>멋있어요</td>
+								<td>흔하지 않은 디자인이어서 좋아요~~</td>
+
+								<td>2024.03.17</td>
+								<td><a href="#" class="btn btn-danger">삭제</a></td>
+								<td><a href="#" class="btn btn-success">댓글</a></td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td><img class="acc1" src="./images/denim.jpg" width="70px"
+									height="70px"></td>
+								<td>청자켓</td>
+								<td>Marie_S2</td>
+								<td>따수버요</td>
+								<td>ㅈㄱㄴ</td>
+
+								<td>2024.03.10</td>
+								<td><a href="#" class="btn btn-danger">삭제</a></td>
+								<td><a href="#" class="btn btn-success">댓글</a></td>
+							</tr>
+							<tr>
+								<td>6</td>
+								<td><img class="acc1" src="./images/glassess.jpg"
+									width="70px" height="70px"></td>
+								<td>안경</td>
+								<td>kelsit7749</td>
+								<td>잘보여요</td>
+								<td>멀리까지 잘 보여요</td>
+
+								<td>2024.03.08</td>
+								<td><a href="#" class="btn btn-danger">삭제</a></td>
+								<td><a href="#" class="btn btn-success">댓글</a></td>
+							</tr>
+							<tr>
+								<td>5</td>
+								<td><img class="acc1" src="./images/hat2.jpg" width="70px"
+									height="70px"></td>
+								<td>비니</td>
+								<td>maria_sM0009</td>
+								<td>수버요</td>
+								<td>근데 따가움요</td>
+
+								<td>2024.03.07</td>
+								<td><a href="#" class="btn btn-danger">삭제</a></td>
+								<td><a href="#" class="btn btn-success">댓글</a></td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td><img class="acc1" src="./images/leather.jpg"
+									width="70px" height="70px"></td>
+								<td>자켓</td>
+								<td>mario_El3</td>
+								<td>이뻐요</td>
+								<td>관리하기 힘들어요</td>
+
+								<td>2024.03.05</td>
+								<td><a href="#" class="btn btn-danger">삭제</a></td>
+								<td><a href="#" class="btn btn-success">댓글</a></td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td><img class="acc1" src="./images/pants.jpg" width="70px"
+									height="70px"></td>
+								<td>청바지</td>
+								<td>garaPikachu_0327</td>
+								<td>굿</td>
+								<td>다른 색상도 살게요 굿~</td>
+
+								<td>2024.03.05</td>
+								<td><a href="#" class="btn btn-danger">삭제</a></td>
+								<td><a href="#" class="btn btn-success">댓글</a></td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td><img class="acc1" src="./images/sand_shoes.jpg"
+									width="70px" height="70px"></td>
+								<td>베이지 신발</td>
+								<td>mangmengmi_umi</td>
+								<td>이뻐요</td>
+								<td>폭신폭신하니 오래 신기 좋아요 굿~</td>
+
+								<td>2024.03.01</td>
+								<td><a href="#" class="btn btn-danger">삭제</a></td>
+								<td><a href="#" class="btn btn-success">댓글</a></td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td><img class="acc1" src="./images/shirts.jpg"
+									width="70px" height="70px"></td>
+								<td>흰 셔츠</td>
+								<td>mario_El3</td>
+								<td>이뻐요</td>
+								<td>예쁘네여</td>
+
+								<td>2024.03.01</td>
+								<td><a href="#" class="btn btn-danger">삭제</a></td>
+								<td><a href="#" class="btn btn-success">댓글</a></td>
+							</tr>
+
 						</table>
 					</div>
-					<!-- //신규 게시글 -->
+					<!-- //신규 리뷰 -->
 				</div>
 			</main>
 			<!-- //관리자 페이지 -->
