@@ -205,7 +205,9 @@ public class memberservlet extends HttpServlet {
 
 		MemberDAO dao = new MemberDAO();
 		MemberDTO member = dao.getOneMemberList(id);
+		List<MemberDTO> newMemberList = dao.newMemberList();
 
+		
 		if (member != null && password.equals(member.getPassword())) {
 
 			if (saveId != null) {
@@ -218,6 +220,7 @@ public class memberservlet extends HttpServlet {
 
 			if (member.getRole().equals("관리자")) {
 				session.setAttribute("role", member.getRole());
+				request.setAttribute("newMemberList", newMemberList);
 				RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/view/admin.jsp");
 				dispatcher.forward(request, response);
 			} else if (member.getRole().equals("블랙회원")) {
