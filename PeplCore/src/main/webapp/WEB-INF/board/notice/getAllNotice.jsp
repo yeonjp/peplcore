@@ -1,355 +1,208 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ADMINISTRATOR</title>
-    <link href="./css/reset.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet"> -->
-    <style>
-
-        @font-face {
-            font-family: 'GmarketSansMedium';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        body {
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-
-        .container {
-            width: 1420px;
-            height: 100vh;
-            background-color: antiquewhite;
-        }
-
-        /* 공통 코드 : a*/
-        a {
-            color: black;
-            text-decoration: none;
-            display: block;
-        }
-
-        .header {
-            font-family: 'GmarketSansMedium';
-            font-weight: bold;
-            width: 100%;
-            height: 80px;
-            display: flex;
-            justify-content: space-between;
-            background-color: #272E3D;
-            /* background-color: beige; */
-
-        }
-        .header a{
-            color:white;
-        }
-
-        .header>h1,
-        img {
-            display: inline-block;
-            vertical-align: middle;
-            /* 적용 x*/
-        }
-
-        .header>img {
-            width: 160px;
-            height: 80px;
-        }   
-
-        .header>topNav {
-            text-decoration: none;
-            display: block;
-        }
-
-        .admin {
-            font-size: 1rem;
-            font-weight: bold;
-            line-height: 75px;
-            margin-left: 4px;
-
-            /* background-color: cornflowerblue; */
-        }
-
-        .topNav {
-            margin-right: 15px;
-            line-height: 75px;
-            /* background-color: darkgray; */
-        }
-
-        .topNav li {
-            display: inline-block;
-        }
-
-        .leftmain {
-            font-family: 'GmarketSansMedium';
-            font-weight: bold;
-            width: 10%;
-            height: 100vh;
-            float: left;
-            text-align: center;
-            background-color: #272E3D;
-        }
-
-        /* 아코디언 */
-        .leftmain>ul {
-            list-style: none;
-            padding: 0;
-            width: 100%;
-        }
-
-        .leftmain li {
-            border-bottom: 1px solid #ddd;
-        }
-
-        .leftmain li:last-child {
-            border-bottom: none;
-        }
-
-        .accordion-header {
-            background-color: #272E3D;
-            color: #fff;
-            padding: 15px;
-            cursor: pointer;
-        }
-
-        .accordion-content {
-            display: none;
-            padding: 15px;
-            background-color: #ffd343;
-        }
-
-        /* .accordion-content a{
-            color: white;
-        } */
-
-        .sideMenu {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            overflow: hidden;
-            /* margin: 150px auto;  */
-        }
-
-        .sideMenu>li {
-            width: 100%;
-            text-align: center;
-            line-height: 40px;
-            background-color: #5778ff;
-            border: 0;
-        }
-
-        .sideMenu a {
-            color: white;
-        }
-
-        .subMenu>li {
-            line-height: 50px;
-            background-color: #94a9ff;
-        }
-
-        .subMenu {
-            height: 0;
-            /* ul의 높이를 안보이게 처리 */
-            overflow: hidden;
-        }
-
-        /* 마우스 올렸을 때 반응! */
-        .sideMenu .accordion-header:hover{
-            background-color: #ffd343;
-            transition: 1s;
-            color: #272E3D;
-        }
-        
-        /* .sideMenu>li:hover .subMenu {
-            height: 160px;
-             서브메뉴 li한개의 높이 50*4 
-            transition-duration: 1s;
-        } */
-        
-
-
-        .main {
-            width: 85%;
-            height: 100vh;
-            min-height: 100%;
-            float: left;
-          
-            /* background-color: bisque; */
-        }
-
-
-        .rightMain {
-            /* margin: 10px 15px; */
-            height: 94%;
-            /* padding-bottom: 30px; */
-            margin: 0;
-            width: 100%;
-            padding-bottom: 0;
-            /* background-color: coral; */
-        }
-
-        h3 {
-            margin: 30px;
-            font-family: 'GmarketSansMedium';
-            /* font-weight: 700; */
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        h4 {
-            margin: 20px;
-            font-size: 1.0rem;
-            font-weight: bold;
-            /* margin-left: 20px; */
-        }
-
-        hr {
-            width: 100%;
-            border: 1px solid black;
-        }
-
-        table {
-            margin-left:20px;
-            margin-top: 10px;
-            border: 1px solid black;
-            border-collapse: collapse;
-        }
-
-        th,
-        td {
-            border: 1px solid black;
-        }
-        th{
-            background-color: #ffd343;
-        }
-
-        .rightFooter {
-            text-align: center;
-            /* line-height: 45px; */
-            width: 100%;
-            height: 6%;
-            margin: 0px;
-            /* position: relative; */
-            /* transform: translateY(-100%); */
-            background-color: #cfcfcf;
-            /* background-color: rgb(56, 141, 141); */
-        }
-    </style>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>Static Navigation - SB Admin</title>
+<link href="css/styles.css" rel="stylesheet" />
+<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+	crossorigin="anonymous"></script>
 </head>
-
 <body>
-	<div class="container">
-		<div class="header">
-			<h1 class="admin">
-				<a href="./index_jyp.html">ADMINISTRATOR</a>
-			</h1>
-			<img class="mainlogo" src="../images/logo_w.png"
-				alt="This is PeplCore logo">
-			<div class="topNav">
-				<ul>
-					<li><a href="#"> <i class="fa-solid fa-store fa-lg"></i>
-					</a></li>
-					<li><a href="#">로그아웃</a></li>
-				</ul>
+	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+		<!-- Navbar Brand-->
+		<a class="navbar-brand ps-1 mt-4 ms-3" href="index.jsp"><img
+			src="./images/logo.png" width="150px" height="70px" alt="logo">
+		</a>
+		<!-- Sidebar Toggle-->
+		<button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
+			id="sidebarToggle" href="#!">
+			<i class="fas fa-bars"></i>
+		</button>
+		<!-- Navbar Search-->
+		<form
+			class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+			<div class="input-group">
+				<input class="form-control" type="text" placeholder="Search for..."
+					aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+				<button class="btn btn-primary" id="btnNavbarSearch" type="button">
+					<i class="fas fa-search"></i>
+				</button>
 			</div>
-		</div>
-		<!-- end of header -->
+		</form>
+		<!-- Navbar-->
+		<ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+			<li>
+				<!-- 로그아웃 -->
+				<button type="button" class="btn btn=primary text-white"
+					onclick="location.href='logout.mc'">로그아웃</button>
+			</li>
+		</ul>
+	</nav>
+	<div id="layoutSidenav">
+		<div id="layoutSidenav_nav">
+			<nav class="sb-sidenav accordion sb-sidenav-dark"
+				id="sidenavAccordion">
+				<div class="sb-sidenav-menu">
+					<div class="nav">
+						<!--   <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Interface</div> -->
+						<a class="nav-link collapsed mt-5" href="#"
+							data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
+							aria-expanded="false" aria-controls="collapseLayouts">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-columns"></i>
+							</div> 회원관리
+							<div class="sb-sidenav-collapse-arrow">
+								<i class="fas fa-angle-down"></i>
+							</div>
+						</a>
 
-		<!-- 왼쪽 사이드바 메뉴, 아코디언 사용할거임 -->
-		<div class="leftmain">
-			<ul class="sideMenu">
-				<li>
-					<div class="accordion-header" onmouseover="ToggleAccordion(this)">회원
-						관리</div>
-					<div class="accordion-content">
-						<p>
-							<a href="#">회원 관리</a>
-						</p>
+						<div class="collapse" id="collapseLayouts"
+							aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+							<nav class="sb-sidenav-menu-nested nav">
+								<a class="nav-link" href="memberInfo.mc">회원 목록</a>
+							</nav>
+						</div>
+						<!-- //회원관리 -->
+						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+							data-bs-target="#collapsePages" aria-expanded="false"
+							aria-controls="collapsePages">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-book-open"></i>
+							</div> 상품관리
+							<div class="sb-sidenav-collapse-arrow">
+								<i class="fas fa-angle-down"></i>
+							</div>
+						</a>
+						<div class="collapse" id="collapsePages"
+							aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+							<nav class="sb-sidenav-menu-nested nav">
+								<a class="nav-link" href="productManagement.pc">상품목록</a>
+							</nav>
+						</div>
+						<!-- //상품관리 -->
+						<!-- 게시글 관리 -->
+						<a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+							data-bs-target="#collapseLayout" aria-expanded="false"
+							aria-controls="collapseLayout">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-columns"></i>
+							</div> 게시글관리
+							<div class="sb-sidenav-collapse-arrow">
+								<i class="fas fa-angle-down"></i>
+							</div>
+						</a>
+
+						<div class="collapse" id="collapseLayout"
+							aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+							<nav class="sb-sidenav-menu-nested nav">
+								<a class="nav-link" href="getAllNotice.bc">공지사항</a> <a
+									class="nav-link" href="getAllFAQList.bc">자주묻는 질문</a>
+							</nav>
+						</div>
+						<!-- //게시글 관리 -->
+						<a class="nav-link" href="charts.html">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-chart-area"></i>
+							</div> Charts
+						</a> <a class="nav-link" href="tables.html">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-table"></i>
+							</div> Tables
+						</a>
 					</div>
-				</li>
-				<!-- 회원 관리 -->
-				<li>
-					<div class="accordion-header" onmouseover="ToggleAccordion(this)">상품
-						관리</div>
-					<div class="accordion-content">
-						<p>
-							<a href="board.bc">상품 목록</a>
-						</p>
-					</div>
-				</li>
-				<!-- 상품 관리 -->
-				<li>
-					<div class="accordion-header" onmouseover="ToggleAccordion(this)">게시글
-						관리</div>
-					<div class="accordion-content">
-                    	<p><a href="board.bc">게시물관리</a></p>
-                        <p><a href="getAllNotice.bc">공지사항</a></p>
-                        <p><a href="getAllFAQList.bc">FAQ</a></p>
-                        <p><a href="#">QnA</a></p>
-                        <p><a href="#">review</a></p>
-					</div>
-				</li>
-			</ul>
+				</div>
+				<div class="sb-sidenav-footer">
+					<div class="small">Logged in as:</div>
+					Start Bootstrap
+				</div>
+			</nav>
 		</div>
-		<!-- end of leftSide -->
+		<!-- 본문 -->
+		<div id="layoutSidenav_content">
+			<main>
+				<div class="container-fluid px-4">
+					<h1 class="mt-4">공지사항 페이지</h1>
 
 
+					<!-- 상픔 리스트 -->
+					<div class="justify-content-between d-flex">
+						<h3 class="mt-5">공지사항 목록</h3>
+						<button type="button" class="btn btn-primary mt-5 me-5"
+							onclick="location.href='insertNoticeView.pc'">공지사항 등록</button>
+					</div>
+					<hr>
+					<div class="container-fluid px-4">
+						<div class="card mb-4">
+							<div class="card-header">
+								<i class="fas fa-table me-1"></i> DataTable Example
+							</div>
+							<div class="card-body">
+								<table id="datatablesSimple" class="text-center pt-3">
+									<thead>
+										<tr>
+											<th>번호</th>
+											<th>제목</th>
+											<th>작성자</th>
+											<th>작성일</th>
+											<th>관리</th>
+										</tr>
+									</thead>
+									<tbody>
+										<c:forEach items="${noticeList}" var="n" varStatus="i">
+											<tr>
+												<td>${n.getBseq()}</td>
+												<td><a href="getOneNotice.bc?seq=${n.getBseq()}">${n.getBtitle()}</a></td>
+												<td>${n.getBid()}</td>
+												<td>${n.getBdate()}</td>
+												<td>
+												<a href="updateNoticeView.bc?seq=${n.getBseq()}">수정</a>
+													<a href="deleteNotice.bc?seq=${n.getBseq()}">삭제</a>
+													</td>
 
-		<div class="main">
-			<form action="insertNoticeView.bc" method="post">
-				<h1>notice 전체리스트</h1>
-				<input type="submit" value="등록">
-			</form>
-			
-				<table border="1">
-					<tr>
-						<th>번호</th>
-						<th>제목</th>
-						<th>작성자</th>
-						<th>작성일</th>
-						<th colspan="2">관리</th>
-					</tr>
-					
-					<c:forEach items="${noticeList}" var="n" varStatus="i">
-						<tr>
-							<td>${n.getBseq()}</td>
-							<td><a href="getOneNotice.bc?seq=${n.getBseq()}">${n.getBtitle()}</a></td>
-							<td>${n.getBid()}</td>
-							<td>${n.getBdate()}</td>
-							<td><a href="updateNoticeView.bc?seq=${n.getBseq()}">수정</a></td>
-							<td><a href="deleteNotice.bc?seq=${n.getBseq()}">삭제</a></td>
-						</tr>
-					</c:forEach>
-				</table>
+											</tr>
+										</c:forEach>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!-- //상품 리스트 -->
+				</div>
+			</main>
+			<footer class="py-4 bg-light mt-auto">
+				<div class="container-fluid px-4">
+					<div
+						class="d-flex align-items-center justify-content-between small">
+						<div class="text-muted">Copyright &copy; Your Website 2023</div>
+						<div>
+							<a href="#">Privacy Policy</a> &middot; <a href="#">Terms
+								&amp; Conditions</a>
+						</div>
+					</div>
+				</div>
+			</footer>
 		</div>
-		<!-- end of rightmain--
-
-
 	</div>
-	<!-- end of container -->
-
-    <!-- 아코디언 js 코드 -->
-    <script>
-        function ToggleAccordion(sideMenu) {
-            var content = sideMenu.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        }
-    </script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+		crossorigin="anonymous"></script>
+	<script src="js/scripts.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+		crossorigin="anonymous"></script>
+	<script src="js/datatables-simple-demo.js"></script>
 </body>
-
 </html>
