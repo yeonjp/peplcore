@@ -141,7 +141,7 @@
 					<div class="justify-content-between d-flex">
 						<h3 class="mt-5">공지사항 목록</h3>
 						<button type="button" class="btn btn-primary mt-5 me-5"
-							onclick="location.href='insertNoticeView.pc'">공지사항 등록</button>
+							onclick="location.href='insertNoticeView.bc'">공지사항 등록</button>
 					</div>
 					<hr>
 					<div class="container-fluid px-4">
@@ -164,13 +164,17 @@
 										<c:forEach items="${noticeList}" var="n" varStatus="i">
 											<tr>
 												<td>${n.getBseq()}</td>
-												<td><a href="getOneNotice.bc?seq=${n.getBseq()}">${n.getBtitle()}</a></td>
+												<td>${n.getBtitle()}</td>
 												<td>${n.getBid()}</td>
 												<td>${n.getBdate()}</td>
 												<td>
-												<a href="updateNoticeView.bc?seq=${n.getBseq()}">수정</a>
-													<a href="deleteNotice.bc?seq=${n.getBseq()}">삭제</a>
-													</td>
+													<button type="button" class="btn btn-primary"
+														onclick="location.href='updateNoticeView.bc?seq=${n.getBseq()}'">수정</button>
+													<button type="button" class="btn btn-danger"
+														onclick="location.href='deleteNotice.bc?seq=${n.getBseq()}'">삭제</button>
+													<button type="button" class="btn btn-success"
+														onclick="location.href='getOneNotice.bc?seq=${n.getBseq()}'">보기</button>
+												</td>
 
 											</tr>
 										</c:forEach>

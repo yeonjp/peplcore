@@ -108,10 +108,8 @@
 						<div class="collapse" id="collapseLayout"
 							aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
 							<nav class="sb-sidenav-menu-nested nav">
-								<a class="nav-link" href="memberInfo.mc">공지사항</a> <a
-									class="nav-link" href="memberInfo.mc">자주묻는 질문</a> <a
-									class="nav-link" href="memberInfo.mc">리뷰</a> <a
-									class="nav-link" href="memberInfo.mc">질문 게시판</a>
+								<a class="nav-link" href="getAllNotice.bc">공지사항</a> <a
+									class="nav-link" href="memberInfo.mc">자주묻는 질문</a> 
 							</nav>
 						</div>
 						<!-- //게시글 관리 -->

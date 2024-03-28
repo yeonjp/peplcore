@@ -20,7 +20,7 @@ public class NoticeDAO {
 	private String NOTICE_DELETE = "delete from notice where bseq=?";
 	private String NOTICE_ONE = "select * from notice where bseq=?";
 	private String NOTICE_All = "select * from notice order by bseq desc";
-	private String NOTICE_MAXSEQ = "select MAX(bseq) as maxbseq from faq"; 
+	private String NOTICE_MAXSEQ = "select MAX(bseq) as maxbseq from notice"; 
 	
 	//1. 공지사항 등록
 	public void insertNotice(NoticeDTO dto) {
