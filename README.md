@@ -22,6 +22,14 @@
   <br></br>
   
 ## 📈 Flow Chart
+<details>
+	<summary>Flow Chart</summary>
+	<div markdown="1">
+	<h4>흐름도</h4>
+	<img src="https://github.com/yeonjp/peplcore/assets/50619898/067d7ef0-815c-4452-ba6f-a911ffdf9086" />
+	<br></br>
+	</div>
+</details>
 
 ## ⌨ 주요 기능 시연
 <details>
