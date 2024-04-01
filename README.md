@@ -62,6 +62,14 @@
 	</div>
 </details>
 <details>
+	<summary>회원관리 페이지</summary>
+	<div markdown="1">
+	<h4>회원관리 페이지</h4>
+	<img src="https://github.com/yeonjp/peplcore/assets/50619898/98a1ad7f-d889-4afe-82a3-822eea6864ed" />
+	<br></br>
+	</div>
+</details>
+<details>
 	<summary>상품관리 페이지</summary>
 	<div markdown="1">
 	<h4>상품관리 페이지</h4>
