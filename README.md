@@ -1,5 +1,5 @@
-# Project
-<div align="center><img src = "https://github.com/yeonjp/peplcore/assets/50619898/c466b0ff-c3bd-4cb8-9b08-99703769f55c" /></div>
+# Project - PEPLCORE
+<div align="center><img src = "https://github.com/yeonjp/peplcore/assets/50619898/b5b80b06-f735-4a3c-857d-888d20088af1" /></div>
 
 ## 👗서비스 개요
 글로벌 사회 속에는 다양한 인종과 성별이 존재하며, 각자의 고유한 스타일과 취향을 의상을 통해 표현하는 것이 보편화되고 있습니다. 이러한 의미를 담아 쇼핑몰의 이름으로 "PEOPLE CORE"를 줄여서 "PEPLCORE"로 지었습니다.<br>
@@ -126,3 +126,4 @@
 
 ## 🏷 사용한 문서 도구
 [🔗Google Drive](https://drive.google.com/drive/folders/1FkgtakCxOT1lR2b5CqQNYS4lWRL1cztg?usp=sharing)
+</div>
