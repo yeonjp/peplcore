@@ -18,19 +18,5 @@ PEPLCORE는 쇼핑몰의 관라지가 어떤 쇼핑몰을 운영하든지 관리
 <br></br>
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" />
 	<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tailwindcss-06B6D4?style=flat&logo=tailwindcss&logoColor=white" />
-  <img src="https://img.shields.io/badge/NextJS-61DAFB?style=flat&logo=React&logoColor=white" />
   <img src="https://img.shields.io/badge/Typescript-3178C6?style=flat&logo=Typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/Recoil-0075EB?style=flat&logo=Recoil&logoColor=white" />
-  <img src="https://img.shields.io/badge/Websocket-B8DBE4?style=flat&logo=Websocket&logoColor=white" />
-  <img src="https://img.shields.io/badge/Axios-5A29E4?style=flat&logo=Axios&logoColor=white" />
-  <img src="https://img.shields.io/badge/Eslint-4B32C3?style=flat&logo=Eslint&logoColor=white" />
-  <img src="https://img.shields.io/badge/Prettier-F7B93E?style=flat&logo=Prettier&logoColor=white" />
   <br></br>
-  <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=Spring&logoColor=white" />
-  <img src="https://img.shields.io/badge/Springsecurity-6DB33F?style=flat&logo=Springsecurity&logoColor=white" />
-  <img src="https://img.shields.io/badge/h2-005AF0?style=flat&logo=H2&logoColor=white" />
-  <img src="https://img.shields.io/badge/Mariadb-003545?style=flat&logo=Mariadb&logoColor=white" />
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat&logo=Redis&logoColor=white" />
-  <img src="https://img.shields.io/badge/Restdocs-DF0067?style=flat&logo=restdocs&logoColor=white" />
-<br></br>
