@@ -42,7 +42,12 @@
 	<summary>MySQL</summary>
 	<div markdown="1">
 	<h4>MySQL 오류</h4>
-	<img src="" />
+	<img src="https://github.com/yeonjp/peplcore/assets/50619898/e0e48124-bc9c-4f0e-a436-9f0d99b7e0c1" />
+	<br></br>
+	</div>
+	<div markdown="1">
+	<h4>MySQL 해결</h4>
+	<img src="https://github.com/yeonjp/peplcore/assets/50619898/c3354622-0ba6-48bf-8245-2abf432b8aaf" />
 	<br></br>
 	</div>
 </details>
