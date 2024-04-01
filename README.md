@@ -26,15 +26,35 @@
 ## ⌨ 주요 기능 시연
 <details>
 	<summary>회원가입</summary>
+	<div markdown="1">
+	<h4>회원가입</h4>
+	<img src="https://github.com/yeonjp/peplcore/assets/50619898/1101157d-701a-4adc-b0c1-3a33a8a661d6" />
+	<br></br>
+	</div>
 </details>
 <details>
 	<summary>관리자 메인 페이지</summary>
+	<div markdown="1">
+	<h4>관리자 메인 페이지</h4>
+	<img src="https://github.com/yeonjp/peplcore/assets/50619898/7b76376d-06b6-4ab7-989c-78cc9d1da1b7" />
+	<br></br>
+	</div>
 </details>
 <details>
 	<summary>상품관리 페이지</summary>
+	<div markdown="1">
+	<h4>상품관리 페이지</h4>
+	<img src="https://github.com/yeonjp/peplcore/assets/50619898/7fa89d43-42de-48b5-9a9e-4b6594e7efc8" />
+	<br></br>
+	</div>
 </details>
 <details>
 	<summary>공지사항 페이지</summary>
+	<div markdown="1">
+	<h4>공지사항 페이지</h4>
+	<img src="https://github.com/yeonjp/peplcore/assets/50619898/e48d3aac-f007-4137-a1a1-f72da089a7e1" />
+	<br></br>
+	</div>
 </details>
 
 ## ⚔ Trouble Shooting
