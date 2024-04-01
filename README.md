@@ -21,12 +21,25 @@
 	<img src="https://img.shields.io/badge/JDK17.0-%23000000?logo=openjdk" />
   <br></br>
   
-## 📈 Flow Chart
+## 📈 Flow Chart&WBS
 <details>
 	<summary>Flow Chart</summary>
 	<div markdown="1">
 	<h4>흐름도</h4>
 	<img src="https://github.com/yeonjp/peplcore/assets/50619898/067d7ef0-815c-4452-ba6f-a911ffdf9086" />
+	<br></br>
+	</div>
+</details>
+<details>
+	<summary>WBS</summary>
+	<div markdown="1">
+	<h4>WBS-1</h4>
+	<img src="https://github.com/yeonjp/peplcore/assets/50619898/fabecf2e-fc20-4fb5-9927-3e019393751c" />
+	<br></br>
+	</div>
+	<div markdown="1">
+	<h4>WBS-2</h4>
+	<img src="https://github.com/yeonjp/peplcore/assets/50619898/ca78a88c-d017-4d84-b865-b1ed2ee4f4bdc" />
 	<br></br>
 	</div>
 </details>
