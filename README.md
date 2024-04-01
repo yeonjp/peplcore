@@ -60,7 +60,7 @@
 	<summary>추후 계획</summary>
 	<div markdown="1">
 	<h4>사용자 페이지 및 관리자 페이지 보완 계획</h4>
-	<img src="" />
+	<img src="https://github.com/yeonjp/peplcore/assets/50619898/e7f12edb-0a41-4afc-a331-e784610d3aeb" />
 	<br></br>
 	</div>
 </details>
