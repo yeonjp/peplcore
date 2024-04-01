@@ -55,7 +55,12 @@
 	<summary>Enctype="multipart/form-data"</summary>
 	<div markdown="1">
 	<h4>Enctype 오류</h4>
-	<img src="" />
+	<img src="https://github.com/yeonjp/peplcore/assets/50619898/350c4377-badb-46de-abca-6ea6a4850a24" />
+	<br></br>
+	</div>
+	<div markdown="1">
+	<h4>Enctype 오류</h4>
+	<img src="https://github.com/yeonjp/peplcore/assets/50619898/11498848-b0db-45af-ba4e-70309e386fd5" />
 	<br></br>
 	</div>
 </details>
