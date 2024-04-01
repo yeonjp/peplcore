@@ -19,3 +19,6 @@ PEPLCORE는 쇼핑몰의 관라지가 어떤 쇼핑몰을 운영하든지 관리
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" />
 	<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
   <br></br>
+
+## 🏷
+[🔗Google Drive](https://drive.google.com/drive/folders/1FkgtakCxOT1lR2b5CqQNYS4lWRL1cztg?usp=sharing)
