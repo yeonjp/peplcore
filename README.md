@@ -20,5 +20,36 @@ PEPLCORE는 쇼핑몰의 관라지가 어떤 쇼핑몰을 운영하든지 관리
 	<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
   <br></br>
 
+## Flow Chart
+
+## ⌨ 주요 기능 시연
+<br></br>
+<details>
+	<summary>회원가입</summary>
+</details>
+<details>
+	<summary>관리자 메인 페이지</summary>
+</details>
+<details>
+	<summary>상품관리 페이지</summary>
+</details>
+<details>
+	<summary>공지사항 페이지</summary>
+</details>
+
+## ⚔ Trouble Shooting
+<details>
+	<summary>MySQL</summary>
+	<div markdown="1">
+	<h4>MySQL 오류</h4>
+	<img src="" />
+	<br></br>
+	</div>
+</details>
+<details>
+	<summary>Enctype="multipart/form-data"</summary>
+</details>
+## 📆 추후 계획
+
 ## 🏷 사용한 문서 도구
 [🔗Google Drive](https://drive.google.com/drive/folders/1FkgtakCxOT1lR2b5CqQNYS4lWRL1cztg?usp=sharing)
