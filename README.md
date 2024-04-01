@@ -15,13 +15,11 @@
 |[🔗](https://github.com/)|[🔗](https://github.com/kimpurple0520)|[🔗](https://github.com/gimpo5975)|[🔗](https://github.com/yeonjp)|
 
 <br></br>
-
 ## 🖥 기술 스택
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" />
 	<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
 	<img src="https://img.shields.io/badge/JDK17.0-%23000000?logo=openjdk" />
   <br></br>
-
 ## Flow Chart
 
 ## ⌨ 주요 기능 시연
@@ -57,6 +55,13 @@
 </details>
 
 ## 📆 추후 계획
-
+<details>
+	<summary>추후 계획</summary>
+	<div markdown="1">
+	<h4>사용자 페이지 및 관리자 페이지 보완 계획</h4>
+	<img src="" />
+	<br></br>
+	</div>
+</details>
 ## 🏷 사용한 문서 도구
 [🔗Google Drive](https://drive.google.com/drive/folders/1FkgtakCxOT1lR2b5CqQNYS4lWRL1cztg?usp=sharing)
