@@ -1,12 +1,12 @@
 # Project - PEPLCORE
-<div align="center><img src = "https://github.com/yeonjp/peplcore/assets/50619898/a1f64fa7-7c49-40a9-abdc-9a73f0178098" /></div>
+
 
 ## 👗서비스 개요
 글로벌 사회 속에는 다양한 인종과 성별이 존재하며, 각자의 고유한 스타일과 취향을 의상을 통해 표현하는 것이 보편화되고 있습니다. 이러한 의미를 담아 쇼핑몰의 이름으로 "PEOPLE CORE"를 줄여서 "PEPLCORE"로 지었습니다.<br>
-
+  <br></br>
 ## ⚙ 관리자 페이지 개요
 1번째 프로젝트로 관리자 페이지를 구현하여 쇼핑몰의 관리자가 관리하기 쉽게 직관성을 띄도록 구현하였습니다.
-<br>
+  <br></br>
 
 ## 👥팀원 소개
 |**김민곤**|**김보라**|**김원중**|**박지연**| 
@@ -43,7 +43,8 @@
 	<br></br>
 	</div>
 </details>
-
+  <br></br>
+  
 ## ⌨ 주요 기능 시연
 <details>
 	<summary>회원가입</summary>
@@ -85,7 +86,8 @@
 	<br></br>
 	</div>
 </details>
-
+  <br></br>
+  
 ## ⚔ Trouble Shooting
 <details>
 	<summary>MySQL</summary>
@@ -113,6 +115,7 @@
 	<br></br>
 	</div>
 </details>
+  <br></br>
 
 ## 📆 추후 계획
 <details>
@@ -123,7 +126,7 @@
 	<br></br>
 	</div>
 </details>
-
+  <br></br>
+  
 ## 🏷 사용한 문서 도구
 [🔗Google Drive](https://drive.google.com/drive/folders/1FkgtakCxOT1lR2b5CqQNYS4lWRL1cztg?usp=sharing)
-</div>
