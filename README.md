@@ -20,5 +20,5 @@ PEPLCORE는 쇼핑몰의 관라지가 어떤 쇼핑몰을 운영하든지 관리
 	<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
   <br></br>
 
-## 🏷
+## 🏷 사용한 문서 도구
 [🔗Google Drive](https://drive.google.com/drive/folders/1FkgtakCxOT1lR2b5CqQNYS4lWRL1cztg?usp=sharing)
