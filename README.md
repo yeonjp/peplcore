@@ -24,6 +24,7 @@
 <img src="https://img.shields.io/badge/mysql-%234479A1?logo=mysql&logoColor=%23fffdf7" />
 <img src="https://img.shields.io/badge/bootstrap-%237952B3?logo=bootstrap&logoColor=%23ffffff" />
 <img src="https://img.shields.io/badge/googledrive-%234285F4?logo=googledrive&logoColor=%23fccf03" />
+<img src="https://img.shields.io/badge/windows10-%230078D6?logo=windows10" />
 <br></br>
   
 ## 📈 Flow Chart&WBS
