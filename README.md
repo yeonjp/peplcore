@@ -37,8 +37,8 @@
 	<img src="https://img.shields.io/badge/bootstrap-%237952B3?logo=bootstrap&logoColor=%23ffffff" /
 	<img src="https://img.shields.io/badge/JDK17.0-%23000000?logo=openjdk" />
 	<img src="https://img.shields.io/badge/googledrive-%234285F4?logo=googledrive&logoColor=%23fccf03" />
-	jsp
 	<br></br>
+	+ jsp/servlet
 </div>
 <div markdown="1">
 	<h4>SERVER/DBMS</h4>
