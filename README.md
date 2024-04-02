@@ -12,7 +12,7 @@
 |**김민곤**|**김보라**|**김원중**|**박지연**| 
 |:---:|:---:|:---:|:---:|
 |**BE팀원**|**BE팀원**|**BE팀원**|**BE팀원**|
-|[🔗](https://github.com/)|[🔗](https://github.com/kimpurple0520)|[🔗](https://github.com/gimpo5975)|[🔗](https://github.com/yeonjp)|
+|[🔗](https://github.com/alsrhs97)|[🔗](https://github.com/kimpurple0520)|[🔗](https://github.com/gimpo5975)|[🔗](https://github.com/yeonjp)|
 
 <br></br>
 
