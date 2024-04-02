@@ -22,7 +22,7 @@
  <img src="https://img.shields.io/badge/visualstudiocode-%235C2D91?logo=visualstudiocode" />
   <img src="https://img.shields.io/badge/eclipseide-%232C2255?logo=eclipseide" />
     <img src="https://img.shields.io/badge/mysql-%234479A1?logo=mysql&logoColor=%23fffdf7" />
-    <img src="https:"https://img.shields.io/badge/bootstrap-%237952B3?logo=bootstrap&logoColor=%23ffffff" />
+    <img src="https://img.shields.io/badge/bootstrap-%237952B3?logo=bootstrap&logoColor=%23ffffff" />
   
 
 
