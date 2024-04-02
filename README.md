@@ -37,12 +37,18 @@
 	<img src="https://img.shields.io/badge/bootstrap-%237952B3?logo=bootstrap&logoColor=%23ffffff" /
 	<img src="https://img.shields.io/badge/JDK17.0-%23000000?logo=openjdk" />
 	<img src="https://img.shields.io/badge/googledrive-%234285F4?logo=googledrive&logoColor=%23fccf03" />
+	jsp
 	<br></br>
 </div>
 <div markdown="1">
 	<h4>SERVER/DBMS</h4>
 	<img src="https://img.shields.io/badge/mysql-%234479A1?logo=mysql&logoColor=%23fffdf7" />
 	<img src="https://img.shields.io/badge/apachetomcat-%23F8DC75?logo=apachetomcat&logoColor=%230d0c0c" />
+	<br></br>
+</div>
+<div markdown="1">
+	<h4>PATTERN</h4>
+	MVC model 2
 	<br></br>
 </div>
 <br></br>
