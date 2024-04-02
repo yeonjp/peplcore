@@ -1,7 +1,7 @@
 <div align="center">
 	
 # Project - PEPLCORE
-<img src="https://github.com/yeonjp/peplcore/assets/50619898/d9463d72-1cc9-4e4a-8e06-dda0ab646a8b" />
+<img src="https://github.com/yeonjp/peplcore/assets/50619898/3fe3d9b8-e4c1-4a30-817e-4e87904d5ac1" />
   <br></br>
 
 ## 👗서비스 개요
