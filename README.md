@@ -30,7 +30,7 @@
 
 <br></br>
   
-## 📈 Flow Chart&WBS
+## 📈 Flow Chart & WBS
 <details>
 	<summary>Flow Chart</summary>
 	<div markdown="1">
