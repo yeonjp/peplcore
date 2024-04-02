@@ -1,3 +1,5 @@
+<div align="center">
+	
 # Project - PEPLCORE
 <img src="https://github.com/yeonjp/peplcore/assets/50619898/d9463d72-1cc9-4e4a-8e06-dda0ab646a8b" />
   <br></br>
@@ -163,3 +165,5 @@
   
 ## 🏷 사용한 문서 도구
 [🔗Google Drive](https://drive.google.com/drive/folders/1FkgtakCxOT1lR2b5CqQNYS4lWRL1cztg?usp=sharing)
+
+</div>
