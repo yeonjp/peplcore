@@ -15,17 +15,22 @@
 |[🔗](https://github.com/)|[🔗](https://github.com/kimpurple0520)|[🔗](https://github.com/gimpo5975)|[🔗](https://github.com/yeonjp)|
 
 <br></br>
+
 ## 🖥 기술 스택
 <div markdown="1">
 	<h4>OS</h4>
 	<img src="https://img.shields.io/badge/windows10-%230078D6?logo=windows10" />
 	<br></br>
 </div>
+<div markdown="1">
+	<h4>IDE</h4>
+	<img src="https://img.shields.io/badge/eclipseide-%232C2255?logo=eclipseide" />
+	<img src="https://img.shields.io/badge/visualstudiocode-%235C2D91?logo=visualstudiocode" />
+	<br></br>
+</div>
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=HTML5&logoColor=white" />
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=CSS3&logoColor=white" />
 <img src="https://img.shields.io/badge/JDK17.0-%23000000?logo=openjdk" />
-<img src="https://img.shields.io/badge/visualstudiocode-%235C2D91?logo=visualstudiocode" />
-<img src="https://img.shields.io/badge/eclipseide-%232C2255?logo=eclipseide" />
 <img src="https://img.shields.io/badge/mysql-%234479A1?logo=mysql&logoColor=%23fffdf7" />
 <img src="https://img.shields.io/badge/bootstrap-%237952B3?logo=bootstrap&logoColor=%23ffffff" />
 <img src="https://img.shields.io/badge/googledrive-%234285F4?logo=googledrive&logoColor=%23fccf03" />
