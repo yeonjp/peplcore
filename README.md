@@ -1,4 +1,5 @@
 # Project - PEPLCORE
+<img src="https://github.com/yeonjp/peplcore/assets/50619898/f0256f3e-f1be-443e-9241-0dbe16ea57cc" />
   <br></br>
 
 ## 👗서비스 개요
